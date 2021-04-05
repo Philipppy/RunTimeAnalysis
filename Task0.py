@@ -20,3 +20,11 @@ Print messages:
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
 
+#first record of texts:
+print("First record of texts: {} texts {} at time {}"
+      .format(texts[0][0],texts[0][1], texts[0][2]))
+
+#Last record of calls:
+print("\nLast record of calls: {} calls {} at time {}"
+      .format(calls[-1][0],calls[-1][1], calls[-1][2]))
+
