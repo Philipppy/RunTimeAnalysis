@@ -44,3 +44,23 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+#fixed lines ="(0" -> everything in brackets
+#mobile = 7 or 8 or 9 and space (after 5 nums) -> first four digits
+#Telemarketer = 140 
+
+#print(calls[6][0][:4])
+list_of_codes = []
+
+"TODO: Generalize"
+for i in range(20):
+    if calls[i][0][:5] == "(080)":
+        print(calls[i][0][:5])
+        print(calls[i][1][:3])
+        if calls[i][1][:2] == "(0":
+            print(calls[i][1])
+            stop_pos = calls[i][1].index(')',2,7)
+            print(stop_pos)
+            list_of_codes.append(calls[i][1][:stop_pos+1])
+                                             
+print(list_of_codes)
+            
