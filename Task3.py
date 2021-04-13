@@ -52,15 +52,13 @@ The percentage should have 2 decimal digits
 list_of_codes = []
 
 "TODO: Generalize"
-for i in range(20):
+for i in range(len(calls)):
     if calls[i][0][:5] == "(080)":
-        print(calls[i][0][:5])
-        print(calls[i][1][:3])
         if calls[i][1][:2] == "(0":
-            print(calls[i][1])
             stop_pos = calls[i][1].index(')',2,7)
-            print(stop_pos)
             list_of_codes.append(calls[i][1][:stop_pos+1])
+        
+        elif calls
                                              
 print(list_of_codes)
             
