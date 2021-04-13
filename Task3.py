@@ -50,15 +50,31 @@ The percentage should have 2 decimal digits
 
 #print(calls[6][0][:4])
 list_of_codes = []
+telemar = 0
 
 "TODO: Generalize"
 for i in range(len(calls)):
     if calls[i][0][:5] == "(080)":
+        #find fixed lines
         if calls[i][1][:2] == "(0":
             stop_pos = calls[i][1].index(')',2,7)
             list_of_codes.append(calls[i][1][:stop_pos+1])
         
-        elif calls
-                                             
-print(list_of_codes)
+        #find mobiles
+        elif calls[i][1][0] in ['7','8','9'] and calls[i][1][5] == ' ':
+            list_of_codes.append(calls[i][1][:5])
+        
+        #find telemarketers
+        elif calls[i][1][:3] == "140":
+            print(calls[i][1][:3])
+            list_of_codes.append('140')
+        
+#TODO sort lexicographic
+print(len(list_of_codes)) 
+cleaned_list = list(set(list_of_codes))
+print(cleaned_list)
+                                   
+print("The numbers called by people in Bangalore have codes:\n")
+for i in range(len(cleaned_list)):
+    print(cleaned_list[i])
             
