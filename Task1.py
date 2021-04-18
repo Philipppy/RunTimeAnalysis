@@ -34,11 +34,7 @@ How many different telephone numbers are there in the records?
 Print a message:
 "There are <count> different telephone numbers in the records."
 """
-#numbers in texts (9072 lines):
-#1)check sending numbers , 2) check receiving numbers
 
-#numbers in calls:
-#1)check calling numbers , 2) check answering numbers 
 
 # list every number that is new in list
 single_nums =[]

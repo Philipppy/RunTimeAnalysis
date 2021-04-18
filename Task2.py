@@ -3,16 +3,16 @@ def check_numbers(phone_list,single_nums):
     #check first column
     for i in range(len(phone_list)):
         if phone_list[i][0] not in single_nums:
-            single_nums.append(texts[i][0])
+            single_nums.append(phone_list[i][0])
             
     #check second column
     for i in range(len(phone_list)):
         if phone_list[i][1] not in single_nums:
-            single_nums.append(texts[i][1])
+            single_nums.append(phone_list[i][1])
     
     return single_nums
 
-def time_on_phone(single_nums,calls):
+def time_on_phone(calls,single_nums):
     #initialize dict with phone numbers as keys
     time_on_phone = {k:0 for k in single_nums}
     
@@ -48,11 +48,11 @@ September 2016.".
 """
 #create list of all numbers in the file 'calls"
 single_nums = []
-single_nums = check_numbers(texts,single_nums)
+single_nums = check_numbers(calls,single_nums)
 
             
 #determine the total phone times for each phone number
-phone_times = time_on_phone(single_nums,calls)
+phone_times = time_on_phone(calls,single_nums)
 
 #get number with highest total time
 max_number = max(phone_times, key=phone_times.get)

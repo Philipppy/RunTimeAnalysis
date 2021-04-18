@@ -44,15 +44,11 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
-#fixed lines ="(0" -> everything in brackets
-#mobile = 7 or 8 or 9 and space (after 5 nums) -> first four digits
-#Telemarketer = 140 
 
-#print(calls[6][0][:4])
 list_of_codes = []
-telemar = 0
 
-"TODO: Generalize"
+
+#Pick different phone codes called from Bangalore
 for i in range(len(calls)):
     if calls[i][0][:5] == "(080)":
         #find fixed lines
@@ -66,15 +62,24 @@ for i in range(len(calls)):
         
         #find telemarketers
         elif calls[i][1][:3] == "140":
-            print(calls[i][1][:3])
             list_of_codes.append('140')
         
-#TODO sort lexicographic
-print(len(list_of_codes)) 
+# delete duplicates ans sort the phone numbers
 cleaned_list = list(set(list_of_codes))
-print(cleaned_list)
-                                   
+sorted_list = sorted(cleaned_list)
+
+#Part A
 print("The numbers called by people in Bangalore have codes:\n")
-for i in range(len(cleaned_list)):
-    print(cleaned_list[i])
-            
+for i in range(len(sorted_list)):
+    print(sorted_list[i])
+    
+    
+#Determine number of receiving calls in Bangalore
+rec_bglr = list_of_codes.count('(080)')
+
+#calculate percentage of receiving calls in bangalore in list of all receiving calls
+percent_bglr = round((rec_bglr/len(list_of_codes))*100,2)
+
+#Part B
+print("\n{} percent of calls from fixed lines in Bangalore are calls "
+      "to other fixed lines in Bangalore.".format(percent_bglr))     
