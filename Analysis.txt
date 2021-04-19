@@ -1,0 +1,31 @@
+For all tasks, I do not consider the import and opening of the files
+
+Task 0:
+Efficiency: O(2)
+Explanation: Since the print statements only print constant values and there is no iteration,
+only two lines will be executed
+
+Task 1:
+Efficiency: O(2(2*3n+1)+4) = O(12n+6)
+Explanation:
+The lines outside the function check numbers get executed only once, which is represented by the constant
+of 5 which is added.
+For each entry in the list, inside check_numbers 2 times three lines and one time the return statement get executed,
+which means 2*3n+1.
+Because there are two lists which get checked (calls, texts), the whole function runs twice. That's why
+it's multiplied by 2
+
+
+Task 2:
+Efficiency: O((2*3n+1)+5)
+Explanation:
+
+
+Task 3:
+Efficiency: O(2)
+Explanation:
+
+
+Task 4:
+Efficiency: O(2)
+Explanation:
