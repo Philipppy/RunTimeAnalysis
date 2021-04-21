@@ -17,15 +17,31 @@ it's multiplied by 2
 
 
 Task 2:
-Efficiency: O((2*3n+1)+5)
+Efficiency: O((2*3n+1)+(3n^2+n+2)+5) = O(3n^2+7n+8
 Explanation:
+Outside the two functions there are 5 lines that are executed independent of n -> +5
+Function check_numbers has one line that is executed independent of n and 2 times 3 lines that have to be executed n times
+in worst case -> 2*3n+1
+Function time on phone contains 2 lines that have to be executed every time independent of n. 
+The line to define the dictionary time on phone has to be executed n times in worst case.
+The inner loop has three lines that have to be executed n times. This is again repeated for n times ->3n^2+n+2
 
 
 Task 3:
-Efficiency: O(2)
+Efficiency: O(4n+2n+7) = 6n+7
 Explanation:
+The program contains 7 lines that get executed independent of n -> 7
+To print the result in single lines 2 lines have to run n times -> 2n
+The for loop executes n times. 
+In the worst case, all calling numbers start with (080) and always the first if condition is met, 
+which would mean 4 lines each time -> 4n
 
 
 Task 4:
-Efficiency: O(2)
+Efficiency: O(2*(2*3n+1)+2n+4) = 14n+6
 Explanation:
+Outside the two functions there are 4 lines that are executed independent of n -> +4
+To print the result in single lines 2 lines have to run n times -> 2n
+Function check_phone_telemarketers has one line that is executed independent of n and 2 times 3 lines that have to be executed n times
+in worst case -> 2*3n+1
+Function check telemarketers works in the same way than check_phone_telemarketers -> 2*3n+1
