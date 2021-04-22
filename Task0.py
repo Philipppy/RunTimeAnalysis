@@ -25,6 +25,6 @@ print("First record of texts: {} texts {} at time {}"
       .format(texts[0][0],texts[0][1], texts[0][2]))
 
 #Last record of calls:
-print("\nLast record of calls: {} calls {} at time {}"
-      .format(calls[-1][0],calls[-1][1], calls[-1][2]))
+print("\nLast record of calls: {} calls {} at time {}, lasting {} seconds"
+      .format(calls[-1][0],calls[-1][1], calls[-1][2],calls[-1][3]))
 

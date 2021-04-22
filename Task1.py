@@ -3,12 +3,12 @@ def check_numbers(phone_list,single_nums):
     #check first column
     for i in range(len(phone_list)):
         if phone_list[i][0] not in single_nums:
-            single_nums.append(texts[i][0])
+            single_nums.append(phone_list[i][0])
             
     #check second column
     for i in range(len(phone_list)):
         if phone_list[i][1] not in single_nums:
-            single_nums.append(texts[i][1])
+            single_nums.append(phone_list[i][1])
     
     return single_nums
             

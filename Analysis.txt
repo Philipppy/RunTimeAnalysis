@@ -1,23 +1,26 @@
 For all tasks, I do not consider the import and opening of the files
 
 Task 0:
-Efficiency: O(2)
+Efficiency: O(2), which is simplified O(1), which means it is constantly executed, independent of the input
 Explanation: Since the print statements only print constant values and there is no iteration,
 only two lines will be executed
 
 Task 1:
-Efficiency: O(2(2*3n+1)+4) = O(12n+6)
+Efficiency: O(2(2*3n^2+1)+4) = O(12n^2+6), simplified to the highest order: O(n^2)
 Explanation:
 The lines outside the function check numbers get executed only once, which is represented by the constant
 of 5 which is added.
-For each entry in the list, inside check_numbers 2 times three lines and one time the return statement get executed,
-which means 2*3n+1.
+For each entry in the list, the for statement has to be evaluated n-times and also the nested if condition 
+checks single nums n-times. One time the return statement get executed,
+which means 2*3n^2+1.
 Because there are two lists which get checked (calls, texts), the whole function runs twice. That's why
 it's multiplied by 2
 
 
 Task 2:
-Efficiency: O((2*3n+1)+(3n^2+n+2)+5) = O(3n^2+7n+8
+Efficiency: O((2*3n+1)+(3n^2+n+2)+5) = O(3n^2+7n+8) The highest order is most expensive. 
+This means the simplified notation is O(n^2)
+
 Explanation:
 Outside the two functions there are 5 lines that are executed independent of n -> +5
 Function check_numbers has one line that is executed independent of n and 2 times 3 lines that have to be executed n times
@@ -28,20 +31,22 @@ The inner loop has three lines that have to be executed n times. This is again r
 
 
 Task 3:
-Efficiency: O(4n+2n+7) = 6n+7
+Efficiency: O((n*logn)+4n+2n+6) = n*logn+6n+6 Simplified to the most expensive part, the notation is O(n*logn)
 Explanation:
-The program contains 7 lines that get executed independent of n -> 7
+The program contains 7 lines that get executed independent of n -> 6
 To print the result in single lines 2 lines have to run n times -> 2n
 The for loop executes n times. 
 In the worst case, all calling numbers start with (080) and always the first if condition is met, 
 which would mean 4 lines each time -> 4n
+Sorting the list has an order of O(n logn)
 
 
 Task 4:
-Efficiency: O(2*(2*3n+1)+2n+4) = 14n+6
+Efficiency: O(2*(2*3n^2+1)+2n+4) = 12n^2+2n+6, simplified to the hightest order this would result in O(n^2)
 Explanation:
 Outside the two functions there are 4 lines that are executed independent of n -> +4
 To print the result in single lines 2 lines have to run n times -> 2n
-Function check_phone_telemarketers has one line that is executed independent of n and 2 times 3 lines that have to be executed n times
-in worst case -> 2*3n+1
-Function check telemarketers works in the same way than check_phone_telemarketers -> 2*3n+1
+Function check_phone_telemarketers has one line that is executed independent of n. 
+The for loop as to be evaluated n-times as well as the nested if statement.
+This results in -> 2*3n^2+1
+Function check telemarketers works in the same way than check_phone_telemarketers -> 2*3n^2+1

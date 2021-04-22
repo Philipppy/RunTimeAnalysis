@@ -58,7 +58,7 @@ for i in range(len(calls)):
         
         #find mobiles
         elif calls[i][1][0] in ['7','8','9'] and calls[i][1][5] == ' ':
-            list_of_codes.append(calls[i][1][:5])
+            list_of_codes.append(calls[i][1][:4])
         
         #find telemarketers
         elif calls[i][1][:3] == "140":
